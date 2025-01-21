@@ -1,0 +1,78 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fefbd8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Lista de mensajes */
+#messages {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    width: 80%;
+    max-width: 600px;
+    background-color: #fff;
+    border: 1px solid #e7b36e;
+    border-radius: 5px;
+    overflow-y: auto;
+    max-height: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Elementos individuales de la lista */
+#messages li {
+    padding: 10px;
+    border-bottom: 1px solid #f0f0f0;
+    word-wrap: break-word;
+}
+
+#messages li:last-child {
+    border-bottom: none;
+}
+
+/* Formulario */
+#form {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+/* Campo de entrada */
+#input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    outline: none;
+    box-shadow: inset 0 2px 4px rgba(201, 76, 76, 0.3);
+}
+
+#input:focus {
+    border-color: #f18973;
+}
+
+/* Botón de envío */
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #f18973;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #80ced6;
+}
