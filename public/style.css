@@ -1,78 +1,117 @@
-/* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #fefbd8;
+/* General reset for margins and paddings */
+body, ul, form {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
-    color: #333;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
 }
 
-/* Lista de mensajes */
-#messages {
-    list-style-type: none;
-    padding: 0;
-    margin: 20px 0;
-    width: 80%;
-    max-width: 600px;
-    background-color: #fff;
-    border: 1px solid #e7b36e;
+/* Dropdown styling */
+#userList {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border: none;
     border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    background-color: #ffdfeb;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Messages list styling */
+#messages {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
     overflow-y: auto;
-    max-height: 300px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    list-style: none;
+    margin-bottom: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Elementos individuales de la lista */
 #messages li {
-    padding: 10px;
-    border-bottom: 1px solid #f0f0f0;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    background-color: #ff85a1;
+    color: #fff;
+    font-weight: bold;
     word-wrap: break-word;
 }
 
-#messages li:last-child {
-    border-bottom: none;
+#messages li:nth-child(odd) {
+    background-color: #ff99b5;
 }
 
-/* Formulario */
-#form {
+/* Form styling */
+form {
     display: flex;
-    justify-content: center;
-    width: 80%;
-    max-width: 600px;
-    margin-bottom: 20px;
+    width: 100%;
+    max-width: 400px;
 }
 
-/* Campo de entrada */
 #input {
     flex: 1;
     padding: 10px;
-    border: 1px solid #ddd;
+    font-size: 1rem;
+    border: none;
     border-radius: 5px 0 0 5px;
-    font-size: 16px;
     outline: none;
-    box-shadow: inset 0 2px 4px rgba(201, 76, 76, 0.3);
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #input:focus {
-    border-color: #f18973;
+    border-color: #ff4081;
+    box-shadow: 0 0 5px #ff4081;
 }
 
-/* Botón de envío */
 button {
-    padding: 10px 20px;
+    padding: 10px 15px;
+    font-size: 1rem;
     border: none;
-    background-color: #f18973;
+    background: linear-gradient(135deg, #ff4081, #ff5e62);
     color: white;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+    transition: background 0.3s;
+    font-weight: bold;
 }
 
 button:hover {
-    background-color: #80ced6;
+    background: linear-gradient(135deg, #e73370, #e75055);
 }
+
+/* Scrollbar customization */
+#messages::-webkit-scrollbar {
+    width: 8px;
+}
+
+#messages::-webkit-scrollbar-thumb {
+    background-color: #ff758c;
+    border-radius: 4px;
+}
+
+#messages::-webkit-scrollbar-thumb:hover {
+    background-color: #ff5e73;
+}
+
